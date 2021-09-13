@@ -18,7 +18,6 @@ def download_link(object_to_download, download_filename, download_link_text):
 
     return f'<a href="data:file/txt;base64,{b64}" download="{download_filename}">{download_link_text}</a>'  
 
-
 def spacy_pytextrank(text):
     
     # load a spaCy model, depending on language, scale, etc.
@@ -50,7 +49,6 @@ def spacy_pytextrank(text):
     df = df.sort_values('Count', ascending = False)
 
     return df
-
 
 def spaCy():
 
