@@ -9,6 +9,7 @@ import pandas as pd
 
 import nltk
 nltk.download('stopwords')
+nltk.download('punkt')
 
 def spacy_sum(text, no_sent):
 
