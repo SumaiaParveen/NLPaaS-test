@@ -114,12 +114,14 @@ def posner():
 
 					if st.button("Show Results", key = "321"):
 						import spacy
-						from spacy_streamlit import visualize_ner
-						import spacy_streamlit
-
+						from spacy import displacy
 						nlp = spacy.load("en_core_web_sm")
 						doc = nlp(raw_text)
-						visualize_ner(doc, labels=nlp.get_pipe("ner").labels)
+						html = displacy.render(doc,style="ent")
+						html = html.replace("\n\n","\n")
+
+						HTML_WRAPPER = """<div style="overflow-x: auto; border: 1px solid #e6e9ef; border-radius: 0.25rem; padding: 1rem">{}</div>"""
+						st.write(HTML_WRAPPER.format(html),unsafe_allow_html=True)
 
 
 			except KeyError:        
