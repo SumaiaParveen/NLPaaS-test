@@ -11,7 +11,8 @@ nltk.download('sentiwordnet')
 from nltk.corpus import sentiwordnet as swn
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 
-import nltk
+import nltk  
+nltk.download()
 nltk.download('punkt')
 from nltk.tokenize import word_tokenize
 from nltk import pos_tag
