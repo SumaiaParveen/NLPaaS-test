@@ -2,11 +2,13 @@ import spacy
 from spacy.lang.en.stop_words import STOP_WORDS
 import en_core_web_sm
 import re
-import nltk
 import heapq
 
 import streamlit as st
 import pandas as pd
+
+import nltk
+nltk.download('stopwords')
 
 def spacy_sum(text, no_sent):
 
