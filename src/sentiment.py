@@ -29,7 +29,7 @@ def download_link(object_to_download, download_filename, download_link_text):
 def sent():
 
     #st.subheader("Unsupervised Sentiment Analysis")
-    st.markdown("<h3 style='text-align: center;'>Rule Based Sentiment Analysis</h3>", unsafe_allow_html=True)
+    st.markdown("<h3 style='text-align: center;'>Unsupervised Sentiment Analysis</h3>", unsafe_allow_html=True)
     uploaded_file = st.file_uploader("Choose a file")
 
     while True:
